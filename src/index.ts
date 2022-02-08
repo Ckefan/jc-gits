@@ -24,8 +24,8 @@ const promptList = [
     message: '请选择分支:',
     name: 'branch',
     pageSize: 10,
-    when: ({ git }) => git === '删除分支（支持模糊查询）',
-    source: async (answers: any, input = '') => {
+    when: ({ git }: any) => git === '删除分支（支持模糊查询）',
+    source: async (_answers: any, input = '') => {
       const { stdout, stderr } = await execSync('git branch --all')
       if (stderr) return console.log(stderr.toString())
       const list = stdout
@@ -38,10 +38,10 @@ const promptList = [
   },
   {
     type: 'confirm',
-    message: ({ branch }) => `是否确定删除【${branch}分支】(本地和远程)`,
+    message: ({ branch }: any) => `是否确定删除【${branch}分支】(本地和远程)`,
     name: 'check',
     default: false,
-    when: ({ branch }) => branch,
+    when: ({ branch }: any) => branch,
   },
 ]
 inquirer.prompt(promptList).then((props: TypesPrompt.promptProps) => {
@@ -58,7 +58,7 @@ inquirer.prompt(promptList).then((props: TypesPrompt.promptProps) => {
 })
 
 /** 删除分支 */
-const deleteBranch = (branch) => {
+const deleteBranch = (branch: string) => {
   const cmd = `git branch -d ${branch} && git push origin --delete ${branch}`
   exec(cmd, (error, stdout, stderr) => {
     if (error) return console.log(error.toString())
