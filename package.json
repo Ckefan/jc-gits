@@ -2,10 +2,10 @@
   "name": "ckf-tools",
   "version": "0.0.0",
   "description": "Front-end daily tools",
-  "main": "dist/bin/index.js",
+  "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "bin": {
-    "ckf-tools": "dist/bin/index.js"
+    "ckf-tools": "dist/index.js"
   },
   "scripts": {
     "dev": "ckf-esbuild run dev",
