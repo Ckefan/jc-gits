@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 import { exec } from 'child_process'
 import inquirer from 'inquirer'
 import util from 'util'
@@ -44,6 +46,7 @@ const promptList = [
     when: ({ branch }: any) => branch,
   },
 ]
+
 inquirer.prompt(promptList).then((props: TypesPrompt.promptProps) => {
   const { git, branch, check } = props
   if (git === '删除分支（支持模糊查询）') {

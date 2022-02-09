@@ -8,8 +8,8 @@
     "ckf-tools": "dist/index.js"
   },
   "scripts": {
-    "dev": "ckf-esbuild run dev",
-    "build": "ckf-esbuild run build"
+    "dev": "ckf-esbuild  dev",
+    "build": "ckf-esbuild  build"
   },
   "repository": {
     "type": "git",
