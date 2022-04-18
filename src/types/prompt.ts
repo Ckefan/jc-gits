@@ -1,6 +1,6 @@
 export interface promptProps {
   tool?: string
-  git?: string
+  git?: number
   branch?: string
   check?: string
 }
