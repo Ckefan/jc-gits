@@ -28,6 +28,7 @@
   },
   "homepage": "https://github.com/Ckefan/ckf-tools#readme",
   "dependencies": {
+    "chalk": "^4.1.2",
     "child_process": "^1.0.2",
     "inquirer": "^8.2.0",
     "inquirer-autocomplete-prompt": "^1.4.0",
@@ -36,7 +37,6 @@
   "devDependencies": {
     "@types/inquirer": "^8.2.0",
     "@types/node": "^17.0.13",
-    "chalk": "^4.1.2",
     "ckf-esbuild": "0.0.2"
   }
 }
