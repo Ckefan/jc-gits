@@ -7,6 +7,7 @@
   "bin": {
     "ckf-tools": "dist/index.js"
   },
+  "type": "module",
   "scripts": {
     "dev": "ckf-esbuild  dev",
     "build": "ckf-esbuild  build"
@@ -30,13 +31,19 @@
   "dependencies": {
     "chalk": "^4.1.2",
     "child_process": "^1.0.2",
+    "dayjs": "^1.11.2",
     "inquirer": "^8.2.0",
     "inquirer-autocomplete-prompt": "^1.4.0",
-    "util": "^0.12.4"
+    "request": "^2.88.2",
+    "util": "^0.12.4",
+    "xml-js": "^1.6.11",
+    "zx": "^6.1.0"
   },
   "devDependencies": {
     "@types/inquirer": "^8.2.0",
+    "@types/inquirer-autocomplete-prompt": "^1.3.4",
     "@types/node": "^17.0.13",
+    "@types/request": "^2.48.8",
     "ckf-esbuild": "0.0.2"
   }
 }
