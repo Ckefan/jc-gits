@@ -1,11 +1,11 @@
 {
-  "name": "@cj/gits",
+  "name": "@jc/gits",
   "version": "0.0.1",
   "description": "git operating tools",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "bin": {
-    "ckf-tools": "dist/index.js"
+    "@jc/gits": "dist/index.js"
   },
   "type": "module",
   "scripts": {
@@ -14,10 +14,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/Ckefan/ckf-tools.git"
+    "url": "https://github.com/Ckefan/jc-gits.git"
   },
   "keywords": [
-    "tool"
+    "git tools"
   ],
   "files": [
     "dist"
@@ -25,9 +25,9 @@
   "author": "chenpeng",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Ckefan/ckf-tools/issues"
+    "url": "https://github.com/Ckefan/jc-gits/issues"
   },
-  "homepage": "https://github.com/Ckefan/ckf-tools#readme",
+  "homepage": "https://github.com/Ckefan/jc-gits#readme",
   "dependencies": {
     "chalk": "^4.1.2",
     "child_process": "^1.0.2",
