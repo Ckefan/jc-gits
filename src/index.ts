@@ -4,7 +4,6 @@ import chalk from 'chalk'
 import inquirer from 'inquirer'
 import InquirerAutocompletePrompt from 'inquirer-autocomplete-prompt'
 import { $ } from 'zx'
-import { getGitLib } from './gitlab.js'
 import { TypesPrompt } from './types'
 
 const log = console.log
@@ -25,7 +24,6 @@ const promptList = [
       { value: 1, name: '删除本地/远程分支（支持模糊查询）' },
       { value: 2, name: '删除非当前的所有本地分支' },
       { value: 3, name: '更新远程/本地分支' },
-      { value: 4, name: '写周报' },
     ],
   },
   {
@@ -81,14 +79,13 @@ inquirer.prompt(promptList).then(async (props: TypesPrompt.promptProps) => {
   } else if (git === 3) {
     updateBranch()
   } else if (git === 4) {
-    getGitLib()
+    // getGitLib()
   }
 })
 
 /** 删除本地/远程分支 */
 const deleteBranch = async (branch: string) => {
-  const { stderr } =
-    await $`git branch -d ${branch} && git push origin --delete ${branch}`
+  const { stderr } = await $`git branch -d ${branch} && git push origin --delete ${branch}`
   if (stderr) return log(chalk.red(stderr.toString()))
   log(chalk.green('删除成功'))
 }

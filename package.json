@@ -1,7 +1,7 @@
 {
-  "name": "ckf-tools",
-  "version": "0.0.3",
-  "description": "Front-end daily tools",
+  "name": "@cj/gits",
+  "version": "0.0.1",
+  "description": "git operating tools",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "bin": {
@@ -9,8 +9,8 @@
   },
   "type": "module",
   "scripts": {
-    "dev": "ckf-esbuild  dev",
-    "build": "ckf-esbuild  build"
+    "dev": "ckf-esbuild dev",
+    "build": "ckf-esbuild build"
   },
   "repository": {
     "type": "git",
